@@ -1,0 +1,107 @@
+use Lighthouse
+db.createCollection('Products')
+db.Products.insert({
+
+	"P_id": 10,
+	"PName":"Meganti",
+	"Description":"Voice Activated RGB LED Colorful Light",
+	"Stock": "105",
+	"Price": "200.00",
+	"ImageURL": "/img/3.jpg"
+	},
+	{
+	"P_id": 11,
+	"PName":"Princepesa",
+	"Description":"LED light",
+	"Stock":"134",
+	"Price": "150.00",
+	"ImageURL": "/img/4.jpg"
+	},
+	{
+	"P_id": 12,
+	"PName":"Zapinza",
+	"Description":"Modern LED light",
+	"Stock":"314",
+	"Price": "200.00",
+	"ImageURL": "/img/5.jpg"
+	},
+	{
+	"P_id": 13,
+	"PName":"Bambi",
+	"Description": "Conventional Light",
+	"Stock":"134",
+	"Price": "100.00",
+	"ImageURL": "/img/6.jpg"
+	},
+	{
+	"P_id": 14,
+	"PName":"Asavi",
+	"Description":"LED Chandelier",
+	"Stock":"141",
+	"Price": "250.00",
+	"ImageURL": "/img/7.jpg"
+	}
+	)
+
+db.createCollection('User')
+db.User.insert({
+	"U_id": ObjectId(),
+	"Name": "Sarah Jones",
+	"Email": "sarah@exmpl.co.uk",
+	"Password": "sarah6",
+	"Address": "6 Pretty Lane, Cardiff",
+	"Contact": "3333"
+	},
+	{
+	"U_id": ObjectId(),
+	"Name": "Tony Strong",
+	"Email": "tony@exmpl.co",
+	"Password": "tony88",
+	"Address": "88 Example Avenue, London",
+	"Contact": "7777"
+	})
+
+db.createCollection('Order')
+db.Order.insert({
+	"O_id": ObjectId(),
+	"ShippingAddress":"3 Example Road, London",
+	"Date": "2017/08/12",
+	"Time": "10:00:00",
+	"Cost": "300.00",
+	"Products": [
+		{
+		"P_id": "000000x00000",
+		"Quantity": "666"
+		}
+		]
+})
+
+db.createCollection('Cart')
+db.Cart.insert({
+	"C_id": ObjectId(),
+	"session_id": "jadkljda",
+	"U_id": "42adaea",
+	"Date": "2018/02/08",
+	"Time": "12:38:27",
+	"Cost": "100.00",
+	"Products": [
+		{
+		"P_id" : "00000x000000",
+		"Quantity" : "13"
+	}
+]
+})
+
+db.createCollection('ContactUs')
+db.ContactUs.insert({
+	"CName": "Alice Smith",
+	"CEmail": "alice@exmpl.net",
+	"Phone": "4545",
+	"Subject": "ABCD",
+	"Message": "TAFFF"
+})
+
+db.createCollection('Subscription')
+db.Subscription .insert({
+	"SEmail": "david@exmpl.com"
+})
