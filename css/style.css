@@ -1,0 +1,304 @@
+body{
+	font: 15px/1.5 Verdana,Helvetica;
+	padding:0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+/*to be used through out the website*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.button_1{
+	height: 35px;
+	background:#e8491d;
+	border: 0;
+	padding-left: 20px;
+	padding-right:20px;
+	color: #ffffff;
+}
+
+.shade{
+	padding: 15px;
+	background: #35424a;
+	color: #ffffff;
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+
+/*Header*/
+
+header{
+	background:#35424a;
+	color: #ffffff;
+	padding-top: 30;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 10px;
+}
+
+header ul{
+	margin: 0;
+	padding: 0;
+}
+header li{
+	float: left;
+	display: inline-block;
+	padding: 0 20px 0 20px;
+	transition: 0.5s all;
+}
+
+header #Logo{
+	float: left;
+}
+
+header #Logo h1{
+	margin-top: 10px;
+}
+
+header nav{
+	float: right;
+	margin-top: 25px;
+}
+
+
+header .highlight{
+	color: 	#B22222;
+	font-weight:bold;
+}
+
+header a:hover{
+	color: #b22222;
+}
+
+/* showcase*/
+#showcase{
+	min-height: 400px;
+	background: url(/img/sc7.jpg);
+	text-align: center;
+	color: #708090;
+}
+
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+	color: #b22222;
+}
+
+#showcase p{
+	font-size: 20px;
+}
+
+/*newsletter subscription*/
+#newsletter{
+	padding: 15px;
+	color: #ffffff;
+	background: #35424a;
+}
+
+#newsletter h1{
+	float: left;
+}
+
+#newsletter form{
+	float: right;
+	margin-top: 15px;
+}
+
+
+#newsletter input[Type="Email"]{
+	padding: 5px;
+	height: 24px;
+	width: 300px;
+}
+
+#newsletter input[Type="text"]{
+	padding: 5px;
+	height: 24px;
+	width: 300px;
+}
+
+/*boxes */
+
+#boxes{
+	margin-top: 25px;
+}
+
+#boxes .box{
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px;
+}
+
+#boxes.img{
+	width: 90px;
+}
+
+
+/* side panel on about us page */
+
+aside#side-col{
+	float:right;
+	width: 29%;
+	margin-top: 9px;
+}
+
+
+aside#side-col .info input, aside#side-col .info textarea{
+	width: 90%;
+	padding: 5px;
+
+}
+
+/* Center article */
+article#center-col{
+	float: left;
+	width: 59%;
+}
+
+
+#mainl input[Type="number"]{
+	padding: 5px;
+	height: 24px;
+	width: 300px;
+}
+
+
+a#main1 input[Type="text"]{
+	padding: 5px;
+	height: 24px;
+	width: 300px;
+}
+
+/*Footer*/
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: #e8491d;
+	text-align: left;
+}
+
+footer ul{
+	margin: 5px;
+	padding: 5px;
+}
+footer li{
+	float: left;
+	display: inline-block;
+	padding: 25px 25px 20px 0 20px;
+	transition: 0.5s all;
+}
+
+footer nav{
+	float: right;
+	align-items: center;
+}
+
+footer a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 10px;
+}
+
+footer .highlight{
+	color: 	#B22222;
+	font-weight:bold;
+}
+
+footer a:hover{
+	color: #b22222;
+}
+
+.gallery{
+	overflow: hidden;
+	padding: 80px 0px;
+}
+
+.p-single{
+	width: 110px;
+	height: 85px;
+	margin: 5px 5px;
+	float: center;
+	position: relative;
+}
+
+.p-single img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+}
+ .wrapper{
+ 	width: 960px;
+ 	margin: 0
+ }
+
+a, a:visited{
+	color: #ffffff;
+	text-decoration: none;
+ }
+ 
+a:hover,a:active {
+	color: #b22222;
+ }
+
+/*global Form */
+
+.info input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.info input[type=number], input[type=url], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+.info input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.info input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+th, td{
+	padding:10px;
+}
