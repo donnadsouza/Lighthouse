@@ -1,6 +1,6 @@
 # Lighthouse
 
-An e-commerce website for a lighting company that offers lighting fixtures to customers. The platform enables users to browse and purchase products, while also featuring a robust admin-only content management system (CMS) that allows staff to manage orders and inventory.
+We developed an e-commerce website for a lighting company that offers lighting fixtures to customers. The platform enables users to browse and purchase products, while also featuring a robust admin-only content management system (CMS) that allows staff to manage orders and inventory.
 
 Front-End Features
 - Customers can view products, descriptions, and prices.
