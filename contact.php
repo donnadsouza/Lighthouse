@@ -47,7 +47,7 @@
 			<aside id="side-col">
 				<div class="shade">
 					<h3>Information</h3>
-					<p>Light House - Dubai - U.A.E<br><strong>Tel:</strong> +971 0000 0000<br><strong>Fax:</strong> +971 0000 0000<br> Email: sales@lighthouse.com</p>
+					<p>Light House<br><strong>Tel:</strong> +1 000 0000<br><strong>Fax:</strong> +1 000 0000<br> Email: sales@lighthouse.com</p>
 				</div>
 			</aside>
 		</div>
@@ -57,3 +57,4 @@
 	//Output the footer
 	outputFooter();
 ?>
+
