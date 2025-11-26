@@ -18,26 +18,26 @@
 		<div class="container">
 			<article id="center-col">
 				<br>
-				<form class="info" action="" method=POST>
+				<form class="info" action="contactus.php" method="post">
 					<div>
 						<label>Name</label><br>
-						<input type="text" name="Name" placeholder="Name">
+						<input type="text" name="name" id = "name" placeholder="Name">
 					</div>
 					<div>
 						<label>Email</label><br>
-						<input type="text" name="Email" placeholder="Email Address">
+						<input type="text" name="email" id = "email" placeholder="Email Address">
 					</div>
 					<div>
 						<label>Phone</label><br>
-						<input type="text" name="Phone" placeholder="Phone No..">
+						<input type="text" name="phone" id = "phone" placeholder="Phone No..">
 					</div>
 					<div>
 						<label>Subject</label><br>
-						<input type="text" name="Subject" placeholder="Subject">
+						<input type="text" name="subject" id = "subject" placeholder="Subject">
 					</div>
 					<div>
 						<label>Message</label><br>
-						<textarea name="Message" placeholder="Message"></textarea>
+						<textarea name="message" id = "message" placeholder="Message"></textarea>
 					</div>
 					<button class="button_1" type="submit" value="Cu">Send</button>
 				</form>
@@ -47,14 +47,15 @@
 			<aside id="side-col">
 				<div class="shade">
 					<h3>Information</h3>
-					<p>Light House<br><strong>Tel:</strong> +1 000 0000<br><strong>Fax:</strong> +1 000 0000<br> Email: sales@lighthouse.com</p>
+					<p>Light House - Dubai - U.A.E<br><strong>Tel:</strong> +971 0000 0000<br><strong>Fax:</strong> +971 0000 0000<br> Email: sales@lighthouse.com</p>
 				</div>
 			</aside>
 		</div>
 	</section>
 
+	<script src="logout.js"> </script>
+
 <?php
-	//Output the footer
+//Output the footer
 	outputFooter();
 ?>
-
