@@ -8,7 +8,6 @@
 .panel-login>.panel-heading {
 	color: #00415d;
 	background-color: #fff;
-	border-color: #fff;
 	text-align:center;
 	margin-top: 50px;
 }
@@ -67,7 +66,6 @@
 .btn-login:focus {
 	color: #fff;
 	background-color: #53A3CD;
-	border-color: #53A3CD;
 }
 .forgot-password {
 	text-decoration: underline;
@@ -94,6 +92,5 @@
 .btn-register:focus {
 	color: #fff;
 	background-color: #1CA347;
-	border-color: #1CA347;
 }
 

@@ -5,6 +5,8 @@
 	outputHeader('Light House | Home');
 	outputBannerNavigation('Home');
 ?>
+	<script src="logout.js"></script>
+	
 	<!--Welcome section-->
 	<section id="showcase">
 		<div class="container">
@@ -17,14 +19,14 @@
 	<section id="newsletter">
 		<div class="container">
 			<h1>Subscribe to Our Newsletter</h1>
-			<form action="" method=POST>
-				<input type="email" name="Email" placeholder="Enter Email...">
-				<button type="submit" class="button_1" value="mail">Subscribe</button>
+			<form action="subscription.php" method=POST>
+				<input type="email" name="email" placeholder="Enter Email..." id="email">
+				<button type="submit" class="button_1" value="mail"> Subscribe</button>
 			</form>
 
 		</div>
 	</section>
-
+	
 	<!--Product types section-->
 	<section id="boxes">
 		<div class="container">
@@ -45,8 +47,9 @@
 			</div>
 		</div>
 	</section>
-
+	
+	
 <?php
-	//Output the footer
+//Output the footer
 	outputFooter();
 ?>

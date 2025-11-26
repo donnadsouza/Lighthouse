@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
 <head>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
-
-<body>
 
 <?php
 	include('common.php'); //PHP file
@@ -13,7 +9,8 @@
 	outputHeader('Light House | Signup/Login');
 	outputBannerNavigation('Signup/Login');
 ?>
-
+	<div id="form">
+	<!--Refrence with the help of bootstrap and couple of youtube tutorials-->
 	 <div class="sub-container">
 		 <div class="row">
 						<div class="col-md-6 col-md-offset-3">
@@ -46,12 +43,13 @@
 															<div class="form-group">
 																 <div class="row">
 																		<div class="col-sm-6 col-sm-offset-3">
-																			 <input  tabindex="4" class="form-control btn btn-login" value="Log In" onclick="">
+																			 <input  tabindex="4" class="form-control btn btn-login" value="Log In" onclick="login()">
 																		</div>
 																 </div>
-															</div>
+															</div> 
+															<p id="ErrorMessages"></p> <!--Displaying error messages-->
 													 </form>
-													 <form id="register-form" method="post" role="form" style="display: none;">
+													 <form id="register-form" method="post" role="form" style="display: none;" action="registration.php">
 															<div class="form-group">
 																 <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 															</div>
@@ -62,15 +60,13 @@
 																 <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
 															</div>
 															<div class="form-group">
-																 <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-															</div>
-															<div class="form-group">
 																 <div class="row">
 																		<div class="col-sm-6 col-sm-offset-3">
-																			 <input type="submit" onclick="" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+																			 <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now" onclick="register()">
 																		</div>
 																 </div>
 															</div>
+															<p id="ServerResponse"> </p> <!--Displaying server response-->
 													 </form>
 												</div>
 										 </div>
@@ -78,7 +74,7 @@
 							 </div>
 						</div>
 				 </div>
-			</div>
+			</div> </div>
 			<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 			<script>
@@ -100,38 +96,80 @@
 				 });
 
 				 });
-
-						 function login(){
-						 //login code here
-				 var username = $('#username1').val();
-				 var password = $('#password1').val();
-
-				 alert(username+' hi i am the username login');
-						 alert(password+' hi i am the password login');
-
-
-						 }
-						 function register(){
-				 var email = $('#email').val();
-				 var username = $('#username').val();
-				 var confirmpassword =$('#confirm-password').val();
-
-
-								 $.post("http://localhost/logintutorial/webservices/register.php",
-				 {
-						 password: confirmpassword,
-						 email: email,
-						 username: username
-				 },
-				 function(data, status){
-						 alert("Data: " + data + "\nStatus: " + status);
-				 });
-						 }
-
 			</script>
+			<script>
+            function register(){
+                //Create request object 
+                var request = new XMLHttpRequest();
+                //Create event handler that specifies what should happen when server responds
+                request.onload = function(){
+                    //Check HTTP status code
+                    if(request.status === 200){
+                        //Get data from server
+                        var responseData = request.responseText;
 
+                        //Add data to page
+                        document.getElementById("ServerResponse").innerHTML = responseData;
+                    }
+                    else{
+                        alert("Error communicating with server: " + request.status);
+					};
+
+					//Set up request with HTTP method and URL 
+					request.open("POST", "registration.php");
+					request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					
+					//Extract registration data
+					var usrName = document.getElementById("name").value;
+					var usrAddress = document.getElementById("email").value;
+					var usrPassword = document.getElementById("password").value;
+
+					//Send request
+					request.send("name=" + usrName + "&email=" + usrAddress + "&password=" + usrPassword);
+				}
+			}
+        </script>
+		<script src="logout.js"> </script>
+		<script>
+			//Attempts to log in user to server
+			function login(){
+				//Create event handler that specifies what should happen when server responds
+				request.onload = function(){
+					//Check HTTP status code
+					if(request.status === 200){
+						//Get data from server
+						var responseData = request.responseText;
+
+						//Add data to page
+						if(responseData === "ok"){
+							document.getElementById("LoginPara").innerHTML = loggedInStr;
+							document.getElementById("ErrorMessages").innerHTML = "";//Clear error messages
+						}
+						else{
+							document.getElementById("ErrorMessages").innerHTML = request.responseText;
+						}
+					}
+					else {
+						alert("Error communicating with server");
+					}
+				}
+
+				//Extract login data
+				var usrEmail = document.getElementById("username1").value;
+				var usrPassword = document.getElementById("password1").value;
+				
+				//Set up and send request
+				request.open("POST", "user_login.php");
+				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				request.send("username=" + usrEmail + "&password=" + usrPassword);
+				alert("Welcome " + usrEmail + "!");
+
+				location.href = "shop.php";
+
+			}
+	</script>
+		
 <?php
 	//Output the footer
 	outputFooter();
 ?>
-

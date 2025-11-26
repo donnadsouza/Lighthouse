@@ -34,7 +34,6 @@ body{
 header{
 	background:#35424a;
 	color: #ffffff;
-	padding-top: 30;
 	min-height: 70px;
 	border-bottom: #e8491d 3px solid;
 }
@@ -84,7 +83,7 @@ header a:hover{
 /* showcase*/
 #showcase{
 	min-height: 400px;
-	background: url(/img/sc7.jpg);
+	background: url(//localhost/lighthouse/img/sc7.jpg);
 	text-align: center;
 	color: #708090;
 }
@@ -192,14 +191,9 @@ footer{
 	text-align: left;
 }
 
-footer ul{
-	margin: 5px;
-	padding: 5px;
-}
 footer li{
 	float: left;
 	display: inline-block;
-	padding: 25px 25px 20px 0 20px;
 	transition: 0.5s all;
 }
 
@@ -234,8 +228,6 @@ footer a:hover{
 	width: 110px;
 	height: 85px;
 	margin: 5px 5px;
-	float: center;
-	position: relative;
 }
 
 .p-single img{

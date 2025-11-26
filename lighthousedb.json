@@ -1,11 +1,11 @@
 use Lighthouse
 db.createCollection('Products')
-db.Products.insert({
+db.Products.insert([{
 
 	"P_id": 10,
 	"PName":"Meganti",
 	"Description":"Voice Activated RGB LED Colorful Light",
-	"Stock": "105",
+	"quantity": "105",
 	"Price": "200.00",
 	"ImageURL": "/img/3.jpg"
 	},
@@ -13,7 +13,7 @@ db.Products.insert({
 	"P_id": 11,
 	"PName":"Princepesa",
 	"Description":"LED light",
-	"Stock":"134",
+	"quantity":"134",
 	"Price": "150.00",
 	"ImageURL": "/img/4.jpg"
 	},
@@ -21,7 +21,7 @@ db.Products.insert({
 	"P_id": 12,
 	"PName":"Zapinza",
 	"Description":"Modern LED light",
-	"Stock":"314",
+	"quantity":"314",
 	"Price": "200.00",
 	"ImageURL": "/img/5.jpg"
 	},
@@ -29,7 +29,7 @@ db.Products.insert({
 	"P_id": 13,
 	"PName":"Bambi",
 	"Description": "Conventional Light",
-	"Stock":"134",
+	"quantity":"134",
 	"Price": "100.00",
 	"ImageURL": "/img/6.jpg"
 	},
@@ -37,14 +37,13 @@ db.Products.insert({
 	"P_id": 14,
 	"PName":"Asavi",
 	"Description":"LED Chandelier",
-	"Stock":"141",
+	"quantity":"141",
 	"Price": "250.00",
 	"ImageURL": "/img/7.jpg"
-	}
-	)
+	}])
 
 db.createCollection('User')
-db.User.insert({
+db.User.insert([{
 	"U_id": ObjectId(),
 	"Name": "Sarah Jones",
 	"Email": "sarah@exmpl.co.uk",
@@ -59,7 +58,7 @@ db.User.insert({
 	"Password": "tony88",
 	"Address": "88 Example Avenue, London",
 	"Contact": "7777"
-	})
+	}])
 
 db.createCollection('Order')
 db.Order.insert({
@@ -77,7 +76,7 @@ db.Order.insert({
 })
 
 db.createCollection('Cart')
-db.Cart.insert({
+db.Cart.insert([{
 	"C_id": ObjectId(),
 	"session_id": "jadkljda",
 	"U_id": "42adaea",
@@ -87,21 +86,31 @@ db.Cart.insert({
 	"Products": [
 		{
 		"P_id" : "00000x000000",
-		"Quantity" : "13"
+		"quantity" : "13"
 	}
 ]
-})
+}])
 
 db.createCollection('ContactUs')
-db.ContactUs.insert({
+db.ContactUs.insert([{
 	"CName": "Alice Smith",
 	"CEmail": "alice@exmpl.net",
 	"Phone": "4545",
 	"Subject": "ABCD",
 	"Message": "TAFFF"
-})
+}])
 
 db.createCollection('Subscription')
-db.Subscription .insert({
+db.Subscription .insert([{
 	"SEmail": "david@exmpl.com"
-})
+}])
+
+db.createCollection('Admin')
+db.Admin.insert({
+	"Username": "Admin1",
+	"Password": "lighthouse123"
+ 	})
+
+db.Products.createIndex({PName:"text"})
+
+
