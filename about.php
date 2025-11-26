@@ -30,6 +30,7 @@
 		</div>
 	</section>
 
+	<script src="logout.js"> </script>
 
 <?php
 outputFooter();
