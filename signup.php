@@ -14,8 +14,6 @@
 	outputBannerNavigation('Signup/Login');
 ?>
 
-	<!--Refrence with the help of bootstrap and couple of youtube tutorials-->
-
 	 <div class="sub-container">
 		 <div class="row">
 						<div class="col-md-6 col-md-offset-3">
@@ -136,3 +134,4 @@
 	//Output the footer
 	outputFooter();
 ?>
+
