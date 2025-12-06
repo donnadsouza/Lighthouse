@@ -17,6 +17,7 @@ We developed an e-commerce website for a lighting company that sells lighting fi
 - HTML
 - CSS
 - JavaScript
+- PHP
 - MongoDB
 
 <!-- 
